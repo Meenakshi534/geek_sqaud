@@ -1,0 +1,42 @@
+.card {
+    height: 480px; 
+    width: fit-content;
+    overflow: hidden;
+    
+    
+
+
+}
+.card-image {
+    height : 200px;
+    
+    overflow: hidden;
+
+}
+
+.adjust {
+    
+    height: auto;
+}
+
+#card-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#card-action {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+
+

@@ -1,0 +1,74 @@
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geek Squad</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content ="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+
+</head>
+<body>
+    
+<nav>
+    <div class="container nav-wrapper">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <a href="/" class ="brand-logo">Geek Sqaud</a>
+        <ul id="nav-mobile" class="right">
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h3 style="text-align: center">Tell us what you are looking for</h3>
+    <div class="row">
+        <div class="col s4">
+            <div class="center">
+                <i class="large material-icons" style="color: #EE6E73">flash_on</i>
+                <p> Love this?.</p>
+                <p class="Light center">Then you should get this.</p>
+            </div> 
+        </div>
+
+        <div class="col s4">
+            <div class="center">
+                <i class="large material-icons" style="color: orange">camera</i>
+                <p> filter your searches </p>
+                <p class="Light center">Your only profitable shop</p>
+            </div> 
+        </div>
+
+        <div class="col s4">
+            <div class="center">
+                <i class="large material-icons" style="color: green">chrome_reader_mode</i>
+                <p>You can build a lot using the built in templates</p>
+                <p class="Light center">You can try using free trial.</p>
+            </div> 
+        </div>
+
+
+    </div>
+
+    
+            
+    <form action="{% url 'new_search' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="search">
+            
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+        </button>
+    </form>
+
+    {% block content %} 
+
+        
+    {% endblock content %}
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
